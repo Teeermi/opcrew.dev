@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,30 +8,31 @@
 body {
     background: #000D1E;
     font-family: Onest;
-    overflow-x: hidden;
     padding: 0 2rem;
 }
 
+
 nav {
     justify-content: space-between;
-display: flex;
+    display: flex;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
 }
 
 .logo  {
     display: flex;
     justify-content: center;
     align-items: center;
-margin-top: 1rem;
     gap: 1rem;
 }
 
-
+.active {
+    color: white;
+}
 
 .nav {
     display: flex;
-    width: 14.188rem;
+    width: 11.728rem;
     justify-content: center;
     gap: 2rem;
     align-items: center;
@@ -42,11 +42,17 @@ margin-top: 1rem;
     color: #FFF;
     text-align: center;
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 600;
 
 }
+
+.logo img {
+    width: 4rem;
+    height: 4rem;
+}
+
 .nav h2, .nav h3 {
     color: rgba(255, 255, 255, 0.68);
     text-align: center;
@@ -59,24 +65,21 @@ margin-top: 1rem;
 
 
 .mainImg {
-
-width: 30rem;
-
-
+    width: 30rem;
 }
 
 
 
 .login {
-    width: 14.188rem;
+    width: 11.728rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.login button {
+.login a {
     all: unset;
-padding: 12px 24px;
+    padding: 12px 24px;
     border-radius: 2rem;
     border: 1px solid #163354;
     color: #FFF;
@@ -94,6 +97,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -145,7 +149,7 @@ header h3 {
 header h4 {
     text-align: center;
     background: linear-gradient(270deg, #8CD4EC 16.74%, #2F5476 100%);
-    background-size: 200% 200%; /* Zwiększenie rozmiaru tła, aby animacja była widoczna */
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -154,7 +158,7 @@ header h4 {
     font-style: normal;
     font-weight: 500;
     line-height: 5rem;
-    animation: gradientAnimation 3s ease infinite; /* Czas trwania animacji, styl i powtarzanie */
+    animation: gradientAnimation 3s ease infinite;
 }
 
 header h5 {
@@ -180,10 +184,11 @@ header h6 {
 }
 
 header img {
-    margin-top: 3rem;
+    flex-shrink: 0;
 }
 .mainH6 {
     margin-top: -6.4rem;
+    max-width: 40rem;
 }
 
 .headerEmailContainer {
@@ -224,14 +229,14 @@ header img {
 }
 
 .headerImg {
-    position: relative; /* Już jest */
+    position: relative;
     max-width: 79.5rem;
-    z-index: 4; /* Upewnij się, że z-index jest większy */
+    z-index: 4;
     width: 100%;
     height: 35.125rem;
     border-radius: 1.25rem;
     overflow: hidden;
-    background: url(b0e6e87ec4661eb2aea67ed888a4f881.png) lightgray 50% / cover no-repeat;
+    background: url(/b0e6e87ec4661eb2aea67ed888a4f881.png) lightgray 50% / cover no-repeat;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
@@ -323,14 +328,31 @@ header img {
 
 .SliderBtns {
     margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .SliderBtns button {
     all: unset;
-    padding: 0.2rem 0.7rem;
-    border-radius: 1.25rem;
-    background: #D9D9D9;
-    color: #676767;
+    padding: 0.2rem 1rem;
+    max-width: 11rem;
+    border-radius: 1.875rem;
+    background: rgba(166, 166, 166, 0.55);
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    transition: all .4s;
+}
+
+.SliderBtns button:hover {
+    position: relative;
+    margin-bottom: 0.2rem;
+    margin-top: -0.2rem;
+    border-radius: 1.875rem;
+    background: rgba(187, 187, 187, 0.91);
+    box-shadow: 0px 4px 14.5px 0px rgba(187, 187, 187, 0.91);
 }
 
 .SliderContainer {
@@ -357,7 +379,7 @@ header img {
     max-width: 27.8125rem;
     color: #BDBDBD;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: 500;
@@ -368,7 +390,7 @@ header img {
     margin-left: -70rem;
     margin-top: 2.5rem;
     position: absolute;
-z-index: 1;
+    z-index: 1;
     width: 7.93344rem;
     height: 23.11781rem;
     border-radius: 2.5rem;
@@ -495,7 +517,7 @@ z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-padding: 0.4rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 1.25rem;
     background: linear-gradient(270deg, rgba(0, 13, 30, 0.56) 0%, rgba(22, 51, 84, 0.56) 100%);
     backdrop-filter: blur(30px);
@@ -541,7 +563,7 @@ padding: 0.4rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-padding: 0.4rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 1.25rem;
     background: linear-gradient(270deg, rgba(0, 13, 30, 0.56) 0%, rgba(22, 51, 84, 0.56) 100%);
     backdrop-filter: blur(30px);
@@ -553,7 +575,7 @@ padding: 0.4rem 1rem;
 .faqLabel h2 {
     color: #FFF;
     text-align: center;
-    
+
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: 500;
@@ -629,7 +651,7 @@ padding: 0.4rem 1rem;
 
 }
 
-.discordText button {
+.discordText a {
     all: unset;
     padding: 1rem 1rem;
     max-width: 11rem;
@@ -641,10 +663,11 @@ padding: 0.4rem 1rem;
     font-style: normal;
     font-weight: 600;
     transition: all .4s;
+    cursor: pointer;
 }
 
-.discordText button:hover {
-position: relative;
+.discordText a:hover {
+    position: relative;
     margin-bottom: 0.2rem;
     margin-top: -0.2rem;
     border-radius: 1.875rem;
@@ -729,7 +752,7 @@ footer {
 
 .rightSide h2 {
     color: #FFF;
-text-align: end;
+    text-align: end;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -739,7 +762,7 @@ text-align: end;
 
 .refsContainerv2 {
     display: flex;
-justify-content: flex-end;
+    justify-content: flex-end;
     gap: 1rem;
 
 }
@@ -757,14 +780,14 @@ justify-content: flex-end;
 .refsContainer {
     display: flex;
     justify-content: flex-end;
-gap: 1rem;
+    gap: 1rem;
 
 }
 
 .refsContainer h3 {
     color: rgba(253, 253, 253, 0.53);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
     font-size: 1rem;
     font-style: normal;
     font-weight: 300;
@@ -788,18 +811,22 @@ gap: 1rem;
 
 }
 
-.footerV2 h2 {
+
+
+.footerV2 h2{
     color: rgba(253, 253, 253, 0.30);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
     font-size: 1rem;
-    font-style: normal;
+
     font-weight: 300;
+
 }
 
 .footerV2 button {
     all: unset;
-padding: 1rem 2rem;
+
+    padding: 1rem 2rem;
     border-radius: 3.125rem;
     border: 1px solid #163354;
     display: flex;
@@ -811,17 +838,18 @@ padding: 1rem 2rem;
 .footerLinkContainer {
     display: flex;
     justify-content: space-between;
-    width: 15rem;
+
 }
 
 
-.footerLinkContainer h3, h4, h5 {
+.footerV2 h3 {
     color: rgba(253, 253, 253, 0.30);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
     font-size: 1rem;
     font-style: normal;
     font-weight: 300;
+    word-spacing: 1rem;
 }
 
 .fa-arrow-up {
@@ -829,7 +857,7 @@ padding: 1rem 2rem;
 }
 
 .feedContainer {
-flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 1.56rem;
     display: flex;
     max-width: 1280px;
@@ -838,14 +866,14 @@ flex-wrap: wrap;
 }
 
 .feed1 {
-    width: 25.4375rem;
+    width: 20.625rem;
     height: 15.25rem;
     border-radius: 1.25rem;
     border: 1px solid #163354;
     background: linear-gradient(180deg, rgba(0, 13, 30, 0.56) 10.5%, rgba(22, 51, 84, 0.34) 100%);
     backdrop-filter: blur(30px);
     padding: 3rem 2rem ;
-   display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 
@@ -898,7 +926,7 @@ flex-wrap: wrap;
     background: linear-gradient(90deg, #163354 0%, rgba(0, 0, 0, 0.00) 50%, #163354 100%);
 }
 
-.blur {
+.blurED {
 
     display: flex;
     justify-content: space-evenly;
@@ -914,13 +942,12 @@ flex-wrap: wrap;
 
 .faq1 {
     display: flex;
-align-items: center;
-    gap: 8.56rem;
+    align-items: flex-start;
+    flex-direction: column;
     border-bottom: 2px solid #646464;
     border-radius: 2px;
     padding-bottom: 2.44rem;
     margin-bottom: 2.81rem;
-
 }
 
 .fa-plus {
@@ -932,18 +959,35 @@ align-items: center;
     color: #BDBDBD;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
 }
 
+.faq1 h3 {
+
+    display: none;
+    margin-top: 1rem;
+    color: #BDBDBD;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+width: 30rem;
+    font-size: 0.9375rem;
+
+    font-weight: 400;
+}
+
+
+
+
 .circle1 {
     margin-top: 20rem;
     position: absolute;
     z-index: -1;
-    width: 64.75rem;
-    height: 31.25rem;
+    max-width: 64.75rem;
+    max-height: 31.25rem;
+    width: 100%;
+    height: 100%;
     border-radius: 64.75rem;
     background: #06203E;
     filter: blur(250px);
@@ -953,8 +997,10 @@ align-items: center;
     margin-top: -80rem;
     position: absolute;
     z-index: -1;
-    width: 54.00525rem;
-    height: 1rem;
+    max-width: 54.00525rem;
+    max-height: 1rem;
+    width: 100%;
+    height: 100%;
     margin-left: -50rem;
     background: #FFF;
     filter: blur(100px);
@@ -965,8 +1011,10 @@ align-items: center;
     margin-top: -80rem;
     position: absolute;
     z-index: -1;
-    width: 54.00525rem;
-    height: 1rem;
+    max-width: 54.00525rem;
+    max-height: 1rem;
+    width: 100%;
+    height: 100%;
     margin-left: -5rem;
     background: #FFF;
     filter: blur(100px);
@@ -996,12 +1044,12 @@ align-items: center;
 
 .whyUs1 {
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     align-items: flex-start;
-  max-width: 22.69rem;
+    max-width: 22.69rem;
     flex-shrink: 0;
     flex-wrap: wrap;
-margin-bottom: 2rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -1042,28 +1090,33 @@ margin-bottom: 2rem;
 }
 
 .ourTeam1 {
-    width: 23.625rem;
+    width: 20.625rem;
     height: 29.125rem;
-    border-radius: 3.125rem;
-    background: url(https://s3-alpha-sig.figma.com/img/65e2/39fe/5580932cbdab65eac598400b52bbaee7?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nnFq8nuFVxVuNAcJXsbMKwgNZF83VPkyOgDbJ1h5cVJGu1o9rdJfT-IknAz60Tm23M8vQj5mCLtjSrP6Q0E-LuZGNiEaCPwaAKiH9kIPf6IMQ1OxcPGeR0YKWqKgsRVgSV-ztLyUu7~x8oLeanYxWAuV7hDO6gUPbrhTYvZHiNFEaNKgZKiTwEBFCoRnm~dqY3aNzj4wqCo78d2FzayYC3LjAAV3v7vFj~FtwV-3S0NvMgU3~36TFJaCu1OruKo7GudP-KbDF5miaYemKMDzFk~RusFI2NqCAsv9ymHE92hUHgk9zm~sYBISwZiM5UHwkc0zu4lhEmvKW7TV71g7Vw__) lightgray 50% / cover no-repeat;
-display: flex;
+    border-radius: 2.125rem;
+    background: url(https://cdn.discordapp.com/avatars/338446887268909067/a_88c142232782ef4f70a8fe77b6af67da.gif) lightgray 50% / cover no-repeat;
+    display: flex;
     align-items: flex-end;
     justify-content: center;
 
 }
 
 .termi {
-    background: url(Designer.jpeg) lightgray 50% / cover no-repeat;
+    background: url(/Designer.jpeg) lightgray 50% / cover no-repeat;
+
+}
+
+.smerfik {
+    background: url(/a_b27f491b99ae35d9d88d3f426352ef56.gif) lightgray 50% / cover no-repeat;
 
 }
 
 .info {
-    width: 20.1875rem;
+    width: 18.1875rem;
     min-height: 9.75rem;
     border-radius: 1.25rem;
     background: rgba(57, 61, 76, 0.56);
     backdrop-filter: blur(30px);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     padding-right:  0.5rem;
@@ -1073,7 +1126,7 @@ display: flex;
 .info h4 {
     color: #FFF;
 
-margin: 1rem 0 0.1rem 1rem;
+    margin: 1rem 0 0.1rem 1rem;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
@@ -1105,7 +1158,7 @@ margin: 1rem 0 0.1rem 1rem;
     width: 7.93344rem;
     height: 23.11781rem;
     border-radius: 2.5rem;
-    background: url(e9b0b8397b030bd5deb05ec1cd91d674.png) lightgray 50% / cover no-repeat;
+    background: url(/e9b0b8397b030bd5deb05ec1cd91d674.png) lightgray 50% / cover no-repeat;
     mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     margin-right: -5rem;
     z-index: -1;
@@ -1115,9 +1168,9 @@ margin: 1rem 0 0.1rem 1rem;
     width: 7.93344rem;
     height: 23.11781rem;
     border-radius: 2.5rem;
-    background: url(e9b0b8397b030bd5deb05ec1cd91d674.png) lightgray 50% / cover no-repeat;
+    background: url(/e9b0b8397b030bd5deb05ec1cd91d674.png) lightgray 50% / cover no-repeat;
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-margin-left: -5rem;
+    margin-left: -5rem;
     z-index: -1;
 }
 
@@ -1143,11 +1196,136 @@ margin-left: -5rem;
         align-items: flex-start;
     }
     .rightSide {
-     align-items: flex-start;
+        align-items: flex-start;
     }
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topSection img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.2rem;
+}
+
+.fa-github {
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-right: 0.6rem;
+}
+
+.navOnPhone {
+    display: none;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 1rem auto 0 auto;
+
+
+}
+
+.fa-bars {
+    color: #FFF;
+    font-size: 2rem;
+    margin-left: 1rem;
+    z-index: 12;
+}
+
+
+@media screen and (max-width: 850px) {
+nav {
+    display: none;
+}
+
+    .navOnPhone {
+        display: flex;
+
+    }
+
+
+    .logo h2 {
+        color: #FFF;
+        text-align: center;
+
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        z-index: 12;
+
+    }
+
+    .logo img {
+        width: 3rem;
+        height: 3rem;
+        z-index: 12;
+
+    }
+
+}
+
+.homeBtn, .shopBtn {
+    all: unset;
+    color: rgba(255, 255, 255, 0.68);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.active {
+    color: white;
+}
+
+.headerImgContainer {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    display: flex;
+    max-width: 1280px;
+    margin: 3rem auto 0 auto;
+    justify-content: center;
 }
 
 
 
+@media screen and (max-width: 750px) {
+    .footerV2 button {
+display: none;
+    }
 
+}
+
+@media screen and (max-width: 630px) {
+.footerV2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+}
+
+
+.faqUpWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+
+}
+
+.navExtended {
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0%;
+    top: 0%;
+    background: #000D1E;
+
+    justify-content: center;
+    padding: 5rem 0;
+}
 
