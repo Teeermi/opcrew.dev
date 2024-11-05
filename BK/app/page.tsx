@@ -1,261 +1,103 @@
-"use client";
-
 import "./style.css"
 import FormNewsletter from "@/app/_components/FormNewsletter";
 import Faq from "@/app/_components/Faq";
 import FooterV2 from "@/app/_components/FooterV2";
-import {motion} from "framer-motion";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import Link from "next/link";
-
-
-
-
-
 
 
 
 export default function Home() {
-
-
-  const items = [
-    {
-      icon: "fa-server",
-      title: "Custom FiveM Scripts for Unique Servers",
-      description: "We create tailored FiveM scripts to elevate your server's gameplay and functionality, ensuring optimal performance and player engagement",
-    },
-    {
-      icon: "fa-laptop-code",
-      title: "Top-Quality Code for Security and Speed",
-      description: "Our code solutions prioritize security and speed, offering resilient performance and seamless user experience",
-    },
-    {
-      icon: "fa-file",
-      title: "Professional Websites Built to Impress",
-      description: "We build responsive, user-friendly websites that capture your brand and engage visitors effectively",
-    },
-    {
-      icon: "fa-headset",
-      title: "Reliable Support When You Need It",
-      description: "Our team provides quick and effective support to keep your systems running smoothly at all times",
-    },
-    {
-      icon: "fa-thumbs-up",
-      title: "Bespoke Projects Tailored to You",
-      description: "We handle custom requests with precision, delivering results that align perfectly with your goals",
-    },
-    {
-      icon: "fa-hand-holding-dollar",
-      title: "High Quality That’s Budget-Friendly",
-      description: "Get top-tier digital solutions without stretching your budget, offering quality and affordability",
-    },
-  ];
-
-
-  const battlePassItems = [
-    {
-      id: 1,
-      title: 'BATTLE PASS',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'
-    },
-    {
-      id: 2,
-      title: 'Nigga pass',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'
-    },
-    {
-      id: 3,
-      title: 'child pass',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'
-    },
-    {
-      id: 4,
-      title: 'abcd',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'
-    },
-    {
-      id: 5,
-      title: 'abcd',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'
-    },
- 
-  ];
-
-
-  const itemZ = [
-    { src: "https://skillicons.dev/icons?i=lua", alt: "Lua" },
-    { src: "https://skillicons.dev/icons?i=js", alt: "JavaScript" },
-    { src: "https://skillicons.dev/icons?i=react", alt: "React" },
-    { src: "https://skillicons.dev/icons?i=vue", alt: "Vue" },
-    { src: "https://skillicons.dev/icons?i=ts", alt: "TypeScript" },
-    { src: "https://skillicons.dev/icons?i=tailwind", alt: "Tailwind" },
-    { src: "https://skillicons.dev/icons?i=figma", alt: "Figma" },
-    { src: "https://skillicons.dev/icons?i=redux", alt: "Redux" },
-    { src: "https://skillicons.dev/icons?i=nextjs", alt: "Next.js" },
-    { src: "https://skillicons.dev/icons?i=vite", alt: "Vite" },
-    { src: "https://skillicons.dev/icons?i=css", alt: "CSS" },
-    { src: "https://skillicons.dev/icons?i=html", alt: "HTML" },
-    { src: "https://skillicons.dev/icons?i=github", alt: "GitHub" },
-    { src: "https://skillicons.dev/icons?i=mysql", alt: "MySQL" }
-  ];
-
-
-  const staggerContainer = {
-    hidden: { opacity: 1 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Czas między animacjami dzieci
-      },
-    },
-  };
-
-  const childVariant = {
-    hidden: { opacity: 0, y: 20 }, // Ukryte na początku
-    show: { opacity: 1, y: 0 },     // Widoczne po animacji
-  };
-
-
-  function scrollUp(element:string) {
-    const elementFind = document.querySelector(`${element}`);
-    elementFind?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
-
-
-
   return (
       <>
-        <motion.header
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{once: true, amount: 0.4}} // Animacja uruchomi się po osiągnięciu 50% widoczności kontenera
-        >
-          <motion.div className="headerBtnBg" variants={childVariant}>
-            <div className="headerBtnContent">
-              <h2>Built for Servers, Designed for Success</h2>
-            </div>
-          </motion.div>
-
-          <motion.h3 variants={childVariant}>We turn</motion.h3>
-          <motion.h4 variants={childVariant}>dreams into reality</motion.h4>
-          <motion.h5 variants={childVariant}>Solutions, Development, Innovation, Support, and Much More</motion.h5>
-
-          <motion.div variants={childVariant}>
-            <FormNewsletter/>
-          </motion.div>
-
-          <motion.div className="headerImg" variants={childVariant}></motion.div>
-
-          <motion.h6
-              className="mainH6"
-              variants={{
-                hidden: {opacity: 0, y: 20}, // Początkowe ukrycie
-                show: {opacity: 1, y: 0},     // Widoczne po animacji
-              }}
-              initial="hidden"
-              whileInView="show"
-              viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 20% widoczności
-          >
-            At OPCREW, we embrace a variety of programming languages to create powerful solutions. Check out the
-            languages and technologies that shape our success!
-          </motion.h6>
-
-          <motion.div
-              className="headerImgContainer"
-              variants={{
-                hidden: {opacity: 0}, // Początkowe ukrycie kontenera
-                show: {
-                  opacity: 1,
-                  transition: {staggerChildren: 0.2}, // Staggering dla dzieci
-                },
-              }}
-              initial="hidden"
-              whileInView="show"
-              viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 40% widoczności
-          >
-            {itemZ.map((item, index) => (
-                <motion.img
-                    src={item.src}
-                    alt={item.alt}
-                    key={index}
-                    variants={{
-                      hidden: {opacity: 0, y: 20}, // Początkowe ukrycie dla obrazka
-                      show: {opacity: 1, y: 0, transition: {duration: 0.5}}, // Widoczne po animacji dla obrazka
-                    }}
-                />
-            ))}
-          </motion.div>
+        <header>
+          <div className="headerBtnBg">
+            <div className="headerBtnContent"><h2>Built for Servers, Designed for Success</h2></div>
+          </div>
+          <h3>We turn</h3>
+          <h4>dreams into reality</h4>
+          <h5>Solutions, Development, Innovation, Support, and Much More</h5>
+          <FormNewsletter/>
+          <div className="headerImg"></div>
+          <h6 className="mainH6">At OPCREW, we embrace a variety of programming languages to create powerful solutions.
+            Check out the languages and technologies that shape our success!</h6>
+          <div className="headerImgContainer">
+            <img src="https://skillicons.dev/icons?i=lua" alt="Lua"/>
+            <img src="https://skillicons.dev/icons?i=js" alt="JavaScript"/>
+            <img src="https://skillicons.dev/icons?i=react" alt="React"/>
+            <img src="https://skillicons.dev/icons?i=vue" alt="Vue"/>
+            <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript"/>
+            <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind"/>
+            <img src="https://skillicons.dev/icons?i=figma" alt="Figma"/>
+            <img src="https://skillicons.dev/icons?i=redux" alt="Redux"/>
+            <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js"/>
+            <img src="https://skillicons.dev/icons?i=vite" alt="Vite"/>
+            <img src="https://skillicons.dev/icons?i=css" alt="CSS"/>
+            <img src="https://skillicons.dev/icons?i=html" alt="HTML"/>
+            <img src="https://skillicons.dev/icons?i=github" alt="GitHub"/>
+            <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL"/>
+          </div>
 
 
-          <motion.div className="circle1" variants={childVariant}></motion.div>
-          <motion.div className="light1" variants={{
-            hidden: {opacity: 0, y: 20}, // Początkowe ukrycie, przesunięcie i brak rotacji
-            show: {opacity: 1, y: 0, rotate: 35} // Widoczne po animacji, przesunięcie w dół i rotacja
-          }}></motion.div>
-          <motion.div className="light2" variants={{
-            hidden: {opacity: 0, y: 20}, // Początkowe ukrycie, przesunięcie i brak rotacji
-            show: {opacity: 1, y: 0, rotate: 35} // Widoczne po animacji, przesunięcie w dół i rotacja
-          }}></motion.div>
-        </motion.header>
+          <div className="circle1"></div>
+          <div className="light1"></div>
+          <div className="light2"></div>
+        </header>
 
-        <motion.div
-            className="whyUsContainer"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{once: true, amount: 0.4}}
-        >
-          <motion.div className="whyUsLabel" variants={childVariant}>
+        <div className="whyUsContainer">
+          <div className="whyUsLabel">
             <i className="fa-solid fa-question"></i>
             <h2>Why us</h2>
-          </motion.div>
-
-          <motion.h3 className="mainWhyUsLabel" variants={childVariant}>
-            Discover what makes us unique
-          </motion.h3>
-
-          <motion.div
-              className="whyUsItemContainer"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={{once: true, amount: 0.4}}
-          >
-            {items.map((item, index) => (
-                <motion.div className="whyUs1" key={index} variants={childVariant}>
-                <i className={`fa-solid ${item.icon}`}></i>
-                  <h4>{item.title}</h4>
-                  <h5>{item.description}</h5>
-                </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+          </div>
+          <h3 className="mainWhyUsLabel">Discover what makes us unique</h3>
 
 
-        <motion.div className="ourTeamContainer" variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 20% widoczności
-        >
-          <motion.div className="ourTeamLabel" variants={childVariant}>
+          <div className="whyUsItemContainer">
+            <div className="whyUs1">
+              <i className="fa-solid fa-server"></i>
+              <h4>Custom FiveM Scripts for Unique Servers</h4>
+              <h5>We create tailored FiveM scripts to elevate your server's gameplay and functionality, ensuring optimal
+                performance and player engagement</h5>
+            </div>
+            <div className="whyUs1">
+              <i className="fa-solid fa-laptop-code"></i>
+              <h4>Top-Quality Code for Security and Speed</h4>
+              <h5>Our code solutions prioritize security and speed, offering resilient performance and seamless user
+                experience</h5>
+            </div>
+            <div className="whyUs1">
+              <i className="fa-solid fa-file"></i>
+              <h4>Professional Websites Built to Impress</h4>
+              <h5>We build responsive, user-friendly websites that capture your brand and engage visitors
+                effectively</h5>
+            </div>
+            <div className="whyUs1">
+              <i className="fa-solid fa-headset"></i>
+              <h4>Reliable Support When You Need It</h4>
+              <h5>Our team provides quick and effective support to keep your systems running smoothly at all times</h5>
+            </div>
+            <div className="whyUs1">
+              <i className="fa-solid fa-thumbs-up"></i>
+              <h4>Bespoke Projects Tailored to You</h4>
+              <h5>We handle custom requests with precision, delivering results that align perfectly with your goals</h5>
+            </div>
+            <div className="whyUs1">
+              <i className="fa-solid fa-hand-holding-dollar"></i>
+              <h4>High Quality That’s Budget-Friendly</h4>
+              <h5>Get top-tier digital solutions without stretching your budget, offering quality and affordability</h5>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="ourTeamContainer">
+          <div className="ourTeamLabel">
             <i className="fa-solid fa-people-group"></i>
             <h2>Our team</h2>
-          </motion.div>
-          <motion.h3 variants={childVariant} className="mainOurTeamsLabel">Meet the dedicated team you can trust
-          </motion.h3>
+          </div>
+          <h3 className="mainOurTeamsLabel">Meet the dedicated team you can trust</h3>
 
-          <motion.div
-              className="ourTeamItemContainer"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 20% widoczności
-          >
-            <motion.div className="ourTeam1 termi" variants={childVariant}>
+          <div className="ourTeamItemContainer">
+            <div className="ourTeam1 termi">
               <div className="info">
                 <div className="topSection">
                   <div className="toptxt">
@@ -263,149 +105,73 @@ export default function Home() {
                     <h5>Developer and CEO</h5>
                   </div>
                   <i className="fa-brands fa-github"></i>
-                </div>
-                <p>
-                  Open-minded programmer with a focus on innovation and efficiency. Known for a problem-solving mindset
-                  and a passion for transforming complex ideas into practical, intuitive solutions.
-                </p>
-              </div>
-            </motion.div>
 
-            <motion.div className="ourTeam1 pk" variants={childVariant}>
+                </div>
+                <p>Open-minded programmer with a focus on innovation and efficiency. Known for a problem-solving mindset
+                  and a passion for transforming complex ideas into practical, intuitive solutions.</p>
+              </div>
+
+
+            </div>
+            <div className="ourTeam1 pk">
               <div className="info">
                 <h4>definitelynotpk</h4>
                 <h5>Developer and CEO</h5>
-                <p>
-                  Skilled scripts developer with a focus on high-quality code and performance optimization, renowned
+                <p>Skilled scripts developer with a focus on high-quality code and performance optimization, renowned
                   for a strategic approach to software solutions. Committed to producing high-quality, optimized
-                  solutions that exceed client expectations.
-                </p>
+                  solutions that exceed client expectations.</p>
               </div>
-            </motion.div>
 
-            <motion.div className="ourTeam1 smerfik" variants={childVariant}>
+
+            </div>
+
+            <div className="ourTeam1 smerfik">
               <div className="info">
                 <h4>Smerfik</h4>
                 <h5>Developer and CEO</h5>
-                <p>
-                  Developer, dedicated to creating high-quality, optimized scripts that enhance gameplay and elevate
-                  the server experience. With a focus on creativity and performance, brings unique features to every
-                  project.
-                </p>
+                <p>Developer, dedicated to creating high-quality, optimized scripts that enhance gameplay and elevate the server experience. With a focus on creativity and performance, brings unique features to every project.</p>
               </div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
 
 
-        <motion.div
-            className="scriptsContainer"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 20% widoczności
-        >
-          <motion.div className="scriptsLabel" variants={childVariant}>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div className="scriptsContainer">
+          <div className="scriptsLabel">
             <i className="fa-solid fa-code"></i>
             <h2>Scripts</h2>
-          </motion.div>
-          <motion.h3 variants={childVariant} className="mainScriptsLabel">
-            Explore Our Collection of Best Scripts
-          </motion.h3>
+          </div>
+          <h3 className="mainScriptsLabel">Explore Our Collection of Best Scripts</h3>
 
-          <Carousel
-              additionalTransfrom={0}
-              arrows
-              autoPlaySpeed={3000}
-              centerMode={false}
-              containerClass="abc"
-              draggable
-              focusOnSelect={false}
-              infinite
-              keyBoardControl
-              minimumTouchDrag={80}
-              pauseOnHover
-              renderArrowsWhenDisabled={false}
-              renderButtonGroupOutside={false}
-              renderDotsOutside={false}
-              responsive={{
-                desktop: {
-                  breakpoint: {
-                    max: 3000,
-                    min: 1024,
-                  },
-                  items: 1,
-                },
-                mobile: {
-                  breakpoint: {
-                    max: 464,
-                    min: 0,
-                  },
-                  items: 1,
-                },
-                tablet: {
-                  breakpoint: {
-                    max: 1024,
-                    min: 464,
-                  },
-                  items: 1,
-                },
-              }}
-              rewind={false}
-              rewindWithAnimation={false}
-              rtl={false}
-              shouldResetAutoplay
-              showDots
-              sliderClass=""
-              slidesToSlide={1}
-              swipeable
-          >
-            <motion.div className="SliderContainer" variants={childVariant}>
-              <h2>BATTLE ASS</h2>
-              <p>ABC</p>
+
+          <div className="abc">
+            <div className="sliderLeftImg"></div>
+            <div className="SliderContainer">
+              <h2>BATTLE PASS</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, </p>
               <div className="SliderBtns">
                 <button>Buy now</button>
-                <button>Preview</button>
+                <button>Learn more</button>
               </div>
-            </motion.div>
+            </div>
+            <div className="sliderRightImg"></div>
+          </div>
 
-            <motion.div className="SliderContainer" variants={childVariant}>
-              <h2>BATTLE ASS</h2>
-              <p>ABC</p>
-              <div className="SliderBtns">
-                <button>Buy now</button>
-                <button>Preview</button>
-              </div>
-            </motion.div>
 
-            <motion.div className="SliderContainer" variants={childVariant}>
-              <h2>BATTLE ASS</h2>
-              <p>ABC</p>
-              <div className="SliderBtns">
-                <button>Buy now</button>
-                <button>Preview</button>
-              </div>
-            </motion.div>
-
-            <motion.div className="SliderContainer" variants={childVariant}>
-              <h2>BATTLE ASS</h2>
-              <p>ABC</p>
-              <div className="SliderBtns">
-                <button>Buy now</button>
-                <button>Preview</button>
-              </div>
-            </motion.div>
-
-            <motion.div className="SliderContainer" variants={childVariant}>
-              <h2>BATTLE ASS</h2>
-              <p>ABC</p>
-              <div className="SliderBtns">
-                <button>Buy now</button>
-                <button>Preview</button>
-              </div>
-            </motion.div>
-          </Carousel>
-        </motion.div>
+          <div className="sliderButtonsContainer">
+            <i className="fa-solid fa-chevron-left"></i>
+            <div className="crcle1"></div>
+            <div className="crcle2"></div>
+            <div className="crcle3"></div>
+            <div className="crcle4"></div>
+            <div className="crcle5"></div>
+            <i className="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
 
         {/*<div className="feedbackContainer">*/}
         {/*  <div className="feedbackLabel">*/}
@@ -461,28 +227,21 @@ export default function Home() {
         {/*  </div>*/}
         {/*</div>*/}
 
-        <Faq/>
+       <Faq/>
 
-        <motion.div
-            className="discordContainer"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{once: true, amount: 0.4}}
-        >
-
-          <motion.div className="discordText" variants={childVariant}>
+        <div className="discordContainer">
+          <div className="discordText">
             <h2>Get in touch with our support team instantly</h2>
             <p>Do you have any questions or concerns, or do you need help with your order? Join our server by clicking
               below.</p>
             <a href="https://discord.gg/7DWNCbBB">Join our discord</a>
-          </motion.div>
+          </div>
 
+          <div className="testt">
+            <img src="/image%202.png" alt=""/>
+          </div>
 
-          <motion.div className="testt" variants={childVariant}>
-            <img src="/image%202.png" alt="Discord server preview"/>
-          </motion.div>
-        </motion.div>
+        </div>
 
         <footer>
           <div className="leftSide">
@@ -501,16 +260,15 @@ export default function Home() {
             <h2>Informations</h2>
 
             <div className="refsContainer">
-              <h3 onClick={() => scrollUp("nav")} >Home</h3>
-              <Link href={"/shop"}>Shop</Link>
-              <h3 onClick={() => scrollUp(".whyUsContainer")} >Why us</h3>
+              <h3>Home</h3>
+              <h3>Shop</h3>
+              <h3>Scripts</h3>
             </div>
 
             <div className="refsContainerv2">
-              <h3 onClick={() => scrollUp(".ourTeamContainer")} >Our team</h3>
-              <h3 onClick={() => scrollUp(".scriptsContainer")}>Scripts</h3>
-              <h3 onClick={() => scrollUp(".faqContainer")} >Faq</h3>
-              <h3 onClick={() => scrollUp(".discordContainer")} >Discord</h3>
+              <h3>Feedback</h3>
+              <h3>Stats</h3>
+              <h3>Faq</h3>
             </div>
 
             <div className="迪克">

@@ -233,7 +233,7 @@ header img {
     max-width: 79.5rem;
     z-index: 4;
     width: 100%;
-    height: 45.125rem;
+    height: 35.125rem;
     border-radius: 1.25rem;
     overflow: hidden;
     background: url(/b0e6e87ec4661eb2aea67ed888a4f881.png) lightgray 50% / cover no-repeat;
@@ -251,7 +251,7 @@ header img {
 
 }
 
-.whyUsContainer, .ourTeamContainer, .shopContainer {
+.whyUsContainer, .ourTeamContainer {
     display: flex;
     max-width: 1280px;
     margin: 6.75rem auto;
@@ -358,12 +358,10 @@ header img {
 .SliderContainer {
     display: flex;
     padding: 3rem;
-
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    flex-shrink: 0;
-
+    max-width: 70.3505rem;
     height: 26.0625rem;
     border-radius: 2.5rem;
     background: linear-gradient(270deg, rgba(115, 115, 115, 0.05) 0%, rgba(0, 0, 0, 0.79) 100%), url(https://s3-alpha-sig.figma.com/img/5552/75eb/e9b0b8397b030bd5deb05ec1cd91d674?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O2H3ygZvtarQSdZeGL~wV-jkrwOzYlcRopK0Qnh8Tr6gcs5JvqtdqpVfb5MbjX2Ae1jgx6GLy0beBADk7WANwXwVktNG5wwCXR-gxKf-sEFh67soKMtDj0hk6EozJeAy6XtVxqjy-y~YLkToOF-xQaR0bhrw7AsDnetjxlGtUklkpBZRU36AyZybp3W0ICERArBmd5KoYsgdrwsYxCLvtzq3Ql5bzzDu3Fl0889PqOE2PQtHqmrGUt5-uqt4Tn22B~cQWPRTmOzbNWm3y-7IeC65UHLgFxRleyOSAg9wyfjpR6pOaipqdWNSpIUZwLnEEtk~0D~ecLNHJ6zjIaLY3w__) lightgray 50% / cover no-repeat;
@@ -597,16 +595,11 @@ header img {
 .faqContainer {
     display: flex;
     max-width: 1280px;
-    margin: 6rem auto;
+    margin: 6.75rem auto;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 50rem;
 
-}
-
-.faqMain {
-    height: 50rem;
 }
 
 .discordContainer {
@@ -781,11 +774,6 @@ footer {
     font-size: 1rem;
     font-style: normal;
     font-weight: 300;
-    margin-top: 0.5rem;
-}
-
-.refsContainerv2 h3:hover {
-    cursor: pointer;
 
 }
 
@@ -804,24 +792,6 @@ footer {
     font-style: normal;
     font-weight: 300;
 
-}
-
-
-.refsContainer h3:hover, .refsContainer a:hover {
-cursor: pointer;
-
-}
-
-
-.refsContainer a {
-    all: unset;
-
-    color: rgba(253, 253, 253, 0.53);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 300;
 }
 
 
@@ -862,11 +832,6 @@ cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-
-.footerV2 button:hover {
-  cursor: pointer;
 
 }
 
@@ -992,21 +957,21 @@ cursor: pointer;
 
 .faq1 h2 {
     color: #BDBDBD;
-
+    text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-margin-bottom: 1rem;
+
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
 }
 
 .faq1 h3 {
-opacity: 0;
 
+    display: none;
+    margin-top: 1rem;
     color: #BDBDBD;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-max-width: 30rem;
+width: 30rem;
     font-size: 0.9375rem;
 
     font-weight: 400;
@@ -1128,7 +1093,7 @@ max-width: 30rem;
     width: 20.625rem;
     height: 29.125rem;
     border-radius: 2.125rem;
-    background: url(/Designer.jpeg) lightgray 50% / cover no-repeat;
+    background: url(https://cdn.discordapp.com/avatars/338446887268909067/a_88c142232782ef4f70a8fe77b6af67da.gif) lightgray 50% / cover no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1141,7 +1106,7 @@ max-width: 30rem;
 }
 
 .smerfik {
-    background: url(/Designer.jpeg) lightgray 50% / cover no-repeat;
+    background: url(/a_b27f491b99ae35d9d88d3f426352ef56.gif) lightgray 50% / cover no-repeat;
 
 }
 
@@ -1187,10 +1152,7 @@ max-width: 30rem;
     margin: 0 0 1rem 1rem;
 
 }
-.carousel-container {
-    width: 100rem;
-    height: 20rem;
-}
+
 
 .sliderLeftImg {
     width: 7.93344rem;
@@ -1216,8 +1178,9 @@ max-width: 30rem;
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
+    justify-content: space-between;
     width: 100%;
-
+    align-items: center;
 }
 
 @media screen and (max-width: 1240px) {
@@ -1361,93 +1324,8 @@ display: none;
     left: 0%;
     top: 0%;
     background: #000D1E;
-display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem 2rem;
 
+    justify-content: center;
+    padding: 5rem 0;
 }
 
-.navExtended h2 {
-    all: unset;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.react-multiple-carousel__arrow--left {
-    background-color: red;
-}
-
-.shopItemsContainer {
-    flex-wrap: wrap;
-
-    display: flex;
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
-.shopItem1 {
-    display: flex;
-flex-direction: column;
-justify-content: flex-end;
-
-}
-
-.shopItem1 img {
-    border-radius: 2.125rem;
-    width: 24.625rem;
-    height: 14.125rem;
-    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4));
-
-}
-.shopItem1 h2 {
-    margin-left: 1rem;
-    margin-top: -5rem;
-    z-index: 10;
-    color: #ffffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-}
-
-
-.SliderBtnsShop {
-    z-index: 10;
-    margin-left: 1rem;
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.7rem;
-}
-
-.SliderBtnsShop button {
-    all: unset;
-    padding: 0.2rem 1rem;
-    max-width: 11rem;
-    border-radius: 1.875rem;
-    background: rgba(166, 166, 166, 0.55);
-    color: #FFF;
-    text-align: center;
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: 600;
-    transition: all .4s;
-}
-
-.SliderBtnsShop button:hover {
-    position: relative;
-    margin-bottom: 0.2rem;
-    margin-top: -0.2rem;
-    border-radius: 1.875rem;
-    background: rgba(187, 187, 187, 0.91);
-    box-shadow: 0px 4px 14.5px 0px rgba(187, 187, 187, 0.91);
-}
-
-.SliderBtnsShop form {
-    display: flex;
-}

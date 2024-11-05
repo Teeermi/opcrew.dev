@@ -38,8 +38,8 @@ function handleClick() {
     <CrispWithNoSSR />
 
     <div className="navExtended" ref={navExtended} style={{display: `none`}}>
-            <h2>Home</h2>
-            <h2>Shop</h2>
+            <h2>opcrew </h2>
+
     </div>
 
     <div className='navOnPhone'>
