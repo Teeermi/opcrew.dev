@@ -62,7 +62,9 @@ export default function PreviewPage() {
                                                amount: 0.4
                                            }} // Animacja tylko raz, po osiągnięciu 20% widoczności
     >
-        <motion.div className="ourTeamLabel" variants={childVariant}>
+        <motion.div className="circle6" variants={childVariant}></motion.div>
+
+        <motion.div className="ourTeamLabel" variants={childVariant} style={{marginTop: "-3.5rem"}}>
             <i className="fa-solid fa-people-group"></i>
             <h2>Shop</h2>
         </motion.div>
@@ -92,7 +94,7 @@ export default function PreviewPage() {
 
                             </form>
 
-                            <Link href={`/products/${item.id}`} >Learn more</Link>
+                            <Link href={`/products/${item.id}`}>Learn more</Link>
                         </div>
                     </motion.div>
 
