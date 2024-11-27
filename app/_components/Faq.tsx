@@ -53,6 +53,9 @@ export default function Faq() {
             whileInView="show"
             viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 60% widoczności
         >
+
+            <motion.div className="circle5" variants={childVariants}></motion.div>
+
             <motion.div className="faqLabel" variants={childVariants}>
                 <i className="fa-solid fa-code"></i>
                 <h2>Faq</h2>
