@@ -15,10 +15,7 @@ const authConfig = {
 
     ],
     callbacks: {
-        authorized: async ({ auth }: { auth: unknown }) => {
 
-            return !!auth;
-        },
     },
     // pages: {
     //     signIn: '/login',
