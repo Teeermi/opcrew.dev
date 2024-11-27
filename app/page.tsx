@@ -193,6 +193,7 @@ export default function Home() {
             whileInView="show"
             viewport={{once: true, amount: 0.4}}
         >
+          <motion.div className="circle2" variants={childVariant}></motion.div>
           <motion.div className="whyUsLabel" variants={childVariant}>
             <i className="fa-solid fa-question"></i>
             <h2>Why us</h2>
@@ -211,7 +212,7 @@ export default function Home() {
           >
             {items.map((item, index) => (
                 <motion.div className="whyUs1" key={index} variants={childVariant}>
-                <i className={`fa-solid ${item.icon}`}></i>
+                  <i className={`fa-solid ${item.icon}`}></i>
                   <h4>{item.title}</h4>
                   <h5>{item.description}</h5>
                 </motion.div>
@@ -225,6 +226,7 @@ export default function Home() {
                     whileInView="show"
                     viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 20% widoczności
         >
+          <motion.div className="circle3" variants={childVariant}></motion.div>
           <motion.div className="ourTeamLabel" variants={childVariant}>
             <i className="fa-solid fa-people-group"></i>
             <h2>Our team</h2>
@@ -246,7 +248,8 @@ export default function Home() {
                     <h4>Termi</h4>
                     <h5>Developer and CEO</h5>
                   </div>
-                  <i className="fa-brands fa-github"></i>
+                  <a href="https://github.com/Teeermi"><i
+                      className="fa-brands fa-github"></i></a>
                 </div>
                 <p>
                   Open-minded programmer with a focus on innovation and efficiency. Known for a problem-solving mindset
@@ -267,17 +270,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div className="ourTeam1 smerfik" variants={childVariant}>
-              <div className="info">
-                <h4>Smerfik</h4>
-                <h5>Developer and CEO</h5>
-                <p>
-                  Developer, dedicated to creating high-quality, optimized scripts that enhance gameplay and elevate
-                  the server experience. With a focus on creativity and performance, brings unique features to every
-                  project.
-                </p>
-              </div>
-            </motion.div>
+
           </motion.div>
         </motion.div>
 
@@ -289,6 +282,7 @@ export default function Home() {
             whileInView="show"
             viewport={{once: true, amount: 0.4}} // Animacja tylko raz, po osiągnięciu 20% widoczności
         >
+          <motion.div className="circle4" variants={childVariant}></motion.div>
           <motion.div className="scriptsLabel" variants={childVariant}>
             <i className="fa-solid fa-code"></i>
             <h2>Scripts</h2>
@@ -297,68 +291,71 @@ export default function Home() {
             Explore Our Collection of Best Scripts
           </motion.h3>
 
-          <Carousel
-              additionalTransfrom={0}
-              arrows
-              autoPlaySpeed={3000}
-              centerMode={false}
-              containerClass="abc"
-              draggable
-              focusOnSelect={false}
-              infinite
-              keyBoardControl
-              minimumTouchDrag={80}
-              pauseOnHover
-              renderArrowsWhenDisabled={false}
-              renderButtonGroupOutside={false}
-              renderDotsOutside={false}
-              responsive={{
-                desktop: {
-                  breakpoint: {
-                    max: 3000,
-                    min: 1024,
-                  },
-                  items: 1,
-                },
-                mobile: {
-                  breakpoint: {
-                    max: 464,
-                    min: 0,
-                  },
-                  items: 1,
-                },
-                tablet: {
-                  breakpoint: {
-                    max: 1024,
-                    min: 464,
-                  },
-                  items: 1,
-                },
-              }}
-              rewind={false}
-              rewindWithAnimation={false}
-              rtl={false}
-              shouldResetAutoplay
-              showDots
-              sliderClass=""
-              slidesToSlide={1}
-              swipeable
-          >
+          <motion.div className="tescikk" variants={childVariant}>
 
-            {scriptsArray.map((item:any) => {
-              return (
-                  <motion.div className="SliderContainer" variants={childVariant} key={item}>
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
-                    <div className="SliderBtns">
-                      <button>Buy now</button>
-                      <button>Preview</button>
+            <Carousel
+                additionalTransfrom={0}
+                arrows
+                autoPlaySpeed={3000}
+                centerMode={false}
+                containerClass="abc"
+                draggable
+                focusOnSelect={false}
+                infinite
+                keyBoardControl
+                minimumTouchDrag={80}
+                pauseOnHover
+                renderArrowsWhenDisabled={false}
+                renderButtonGroupOutside={false}
+                renderDotsOutside={false}
+                responsive={{
+                  desktop: {
+                    breakpoint: {
+                      max: 3000,
+                      min: 1024,
+                    },
+                    items: 1,
+                  },
+                  mobile: {
+                    breakpoint: {
+                      max: 464,
+                      min: 0,
+                    },
+                    items: 1,
+                  },
+                  tablet: {
+                    breakpoint: {
+                      max: 1024,
+                      min: 464,
+                    },
+                    items: 1,
+                  },
+                }}
+                rewind={false}
+                rewindWithAnimation={false}
+                rtl={false}
+                shouldResetAutoplay
+                showDots
+                sliderClass=""
+                slidesToSlide={1}
+                swipeable
+            >
+
+              {scriptsArray.map((item: any) => {
+                return (
+                    <div className="SliderContainer" variants={childVariant} key={item}>
+                      <h2>{item.title}</h2>
+                      <p>{item.description}</p>
+                      <div className="SliderBtns">
+                        <Link href={`/products/${item.id}`}>Buy now</Link>
+                        <Link href={item.youtube_link}>Preview</Link>
+                      </div>
                     </div>
-                  </motion.div>
-              )
-            })}
+                )
+              })}
 
-          </Carousel>
+            </Carousel>
+          </motion.div>
         </motion.div>
 
         {/*<div className="feedbackContainer">*/}
@@ -436,6 +433,7 @@ export default function Home() {
           <motion.div className="testt" variants={childVariant}>
             <img src="/image%202.png" alt="Discord server preview"/>
           </motion.div>
+          <motion.div className="circle6" variants={childVariant}></motion.div>
         </motion.div>
 
         <footer>
