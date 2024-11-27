@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useSession } from "next-auth/react"
 import {usePathname} from "next/navigation";
 import dynamic from 'next/dynamic'
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import useWindowDimensions from "./getWidth";
 
 const CrispWithNoSSR = dynamic(
@@ -14,7 +14,6 @@ const CrispWithNoSSR = dynamic(
 
 
 export default function Navigation() {
-    const { data: session } = useSession()
 const pathname = usePathname();
 const navExtended = useRef(null);
 
@@ -32,14 +31,18 @@ function handleClick() {
 }
 
 
+function clickCheck() {
+    navExtended.current.style.display = "none";
+}
+
 
     return (
 <>
     <CrispWithNoSSR />
 
     <div className="navExtended" ref={navExtended} style={{display: `none`}}>
-            <h2>Home</h2>
-            <h2>Shop</h2>
+        <Link href={"/"} onClick={clickCheck} >Home</Link>
+        <Link href={"/shop"} onClick={clickCheck} >Shop</Link>
     </div>
 
     <div className='navOnPhone'>
@@ -50,7 +53,7 @@ function handleClick() {
 
         <div className="login">
 
-               <Link href={"/login"}>Login</Link>
+
             <i className="fa-solid fa-bars" onClick={handleClick} ></i>
         </div>
 
@@ -64,13 +67,11 @@ function handleClick() {
             <h2>opcrew.dev</h2>
         </div>
         <div className="nav">
-
-
             <Link href={"/"} className={pathname === "/" ? "homeBtn active" : "homeBtn"} >Home</Link>
             <Link href={"/shop"} className={pathname === "/shop" ? "shopBtn active" : "shopBtn"} >Shop</Link>
         </div>
         <div className="login">
-            <Link href={"/login"}>Login</Link>
+            <a href="">123</a>
         </div>
         </nav>
 </>
