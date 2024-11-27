@@ -55,10 +55,13 @@ export default function ProductPage() {
     return (
         <>
             {products ? <div className="productContainer">
-                <div className="ourTeamLabel">
+
+                <motion.div className="circle7" variants={childVariant}></motion.div>
+                <div className="ourTeamLabel" style={{marginTop: "-3.5rem"}}>
                     <i className="fa-solid fa-people-group"></i>
                     <h2>Products</h2>
                 </div>
+
                 <h3 className="mainOurTeamsLabel">{products.name}
                 </h3>
 
@@ -110,11 +113,12 @@ export default function ProductPage() {
                 <motion.div className="testt" variants={childVariant}>
                     <img src="/image%202.png" alt="Discord server preview"/>
                 </motion.div>
+                <motion.div className="circle8" variants={childVariant}></motion.div>
             </motion.div>
 
             <footer>
                 <div className="leftSide">
-                    <div className="brand">
+                <div className="brand">
                         <img src="/Designer%201.png" alt=""/>
                         <h2>opcrew.dev</h2>
                     </div>
