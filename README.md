@@ -50,6 +50,17 @@ If you have any questions or suggestions, feel free to **DM me**!
 
 ---
 
+## 🎥 Showcase
+
+https://prnt.sc/5Sh_Y78GCum9
+https://prnt.sc/ouZKiZ1Mrw_1
+https://prnt.sc/3jijXV572Ins
+https://prnt.sc/d222bvCjndM2
+https://prnt.sc/ADQIXK7HByGP
+https://prnt.sc/1g_oRvoEtIWn
+
+---
+
 ### 🤝 Contributions & Feedback
 
 opcrew.dev is in active development. Feedback and contributions are welcome! If you encounter any issues or have ideas for improvements, feel free to open an issue or reach out!

@@ -347,12 +347,12 @@ export default function Home() {
             slidesToSlide={1}
             swipeable
           >
-            {scriptsArray.map((item: Script) => {
+            {scriptsArray.map((item: any) => {
               return (
-                <motion.div
+                <div
                   className="SliderContainer"
                   variants={childVariant}
-                  key={item.id}
+                  key={item}
                 >
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
